@@ -1,0 +1,9 @@
+﻿Save Format v3.0(19990112)
+@begin Libraries
+ "translate_content.pbl" "";
+@end;
+@begin Objects 
+ "translate_content.sra" "translate_content.pbl";
+ "p_translate_content_exe.srj" "translate_content.pbl";
+ "w_convert.srw" "translate_content.pbl";
+@end;

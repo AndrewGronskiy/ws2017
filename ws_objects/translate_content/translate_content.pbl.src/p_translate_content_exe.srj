@@ -1,0 +1,16 @@
+﻿$PBExportHeader$p_translate_content_exe.srj
+$PBExportComments$Generated Application Executable Project
+EXE:translate_content.exe,,0,1,1
+CMP:0,0,0,2,0,0,1
+COM:Appeon
+DES:Appeon Product File
+CPY:
+PRD:PowerBuilder Enterprise Series
+PVS:1.0.0.1
+PVN:1,0,0,1
+FVS:1.0.0.1
+FVN:1,0,0,1
+MAN:0,asInvoker,0
+PBD:translate_content.pbl,,0
+OBJ:d:\projects\appeon\pb2017\translate_content\translate_content.pbl,w_convert,w
+OBJ:D:\PROJECTS\APPEON\PB2017\translate_content\translate_content.pbl,translate_content,a

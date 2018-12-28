@@ -1,0 +1,6 @@
+Save Format v3.0(19990112)
+@begin Targets
+ 0 "translate_content\\translate_content.pbt";
+@end;
+DefaultTarget "translate_content\\translate_content.pbt";
+DefaultRemoteTarget "translate_content\\translate_content.pbt";
