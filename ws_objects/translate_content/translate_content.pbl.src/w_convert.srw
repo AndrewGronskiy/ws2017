@@ -89,6 +89,9 @@ destroy(this.cbx_1)
 destroy(this.rte_rtf)
 end on
 
+event open;//Проверка
+end event
+
 type cb_rtf from commandbutton within w_convert
 integer x = 5358
 integer width = 128
