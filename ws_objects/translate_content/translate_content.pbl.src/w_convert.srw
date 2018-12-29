@@ -14,10 +14,6 @@ type sle_doc from singlelineedit within w_convert
 end type
 type rte_doc from richtextedit within w_convert
 end type
-type cbx_2 from checkbox within w_convert
-end type
-type cbx_1 from checkbox within w_convert
-end type
 type rte_rtf from richtextedit within w_convert
 end type
 end forward
@@ -40,8 +36,6 @@ st_1 st_1
 cb_doc cb_doc
 sle_doc sle_doc
 rte_doc rte_doc
-cbx_2 cbx_2
-cbx_1 cbx_1
 rte_rtf rte_rtf
 end type
 global w_convert w_convert
@@ -57,8 +51,6 @@ this.st_1=create st_1
 this.cb_doc=create cb_doc
 this.sle_doc=create sle_doc
 this.rte_doc=create rte_doc
-this.cbx_2=create cbx_2
-this.cbx_1=create cbx_1
 this.rte_rtf=create rte_rtf
 this.Control[]={this.sle_rtf,&
 this.st_2,&
@@ -66,8 +58,6 @@ this.st_1,&
 this.cb_doc,&
 this.sle_doc,&
 this.rte_doc,&
-this.cbx_2,&
-this.cbx_1,&
 this.rte_rtf}
 end on
 
@@ -78,8 +68,6 @@ destroy(this.st_1)
 destroy(this.cb_doc)
 destroy(this.sle_doc)
 destroy(this.rte_doc)
-destroy(this.cbx_2)
-destroy(this.cbx_1)
 destroy(this.rte_rtf)
 end on
 
@@ -177,7 +165,7 @@ end type
 type rte_doc from richtextedit within w_convert
 integer y = 104
 integer width = 2734
-integer height = 2516
+integer height = 2644
 integer taborder = 30
 integer textsize = -10
 integer weight = 400
@@ -193,51 +181,11 @@ boolean init_inputfieldnamesvisible = true
 boolean init_popmenu = true
 end type
 
-type cbx_2 from checkbox within w_convert
-integer x = 4754
-integer y = 2656
-integer width = 704
-integer height = 80
-integer textsize = -10
-integer weight = 400
-fontcharset fontcharset = russiancharset!
-fontpitch fontpitch = variable!
-fontfamily fontfamily = swiss!
-string facename = "Tahoma"
-long textcolor = 33554432
-long backcolor = 67108864
-string text = "input fields nsme visible"
-end type
-
-event clicked;rte_rtf.InputFieldNamesVisible = not rte_rtf.InputFieldNamesVisible
-rte_doc.InputFieldNamesVisible = not rte_doc.InputFieldNamesVisible
-end event
-
-type cbx_1 from checkbox within w_convert
-integer x = 4110
-integer y = 2656
-integer width = 599
-integer height = 80
-integer textsize = -10
-integer weight = 400
-fontcharset fontcharset = russiancharset!
-fontpitch fontpitch = variable!
-fontfamily fontfamily = swiss!
-string facename = "Tahoma"
-long textcolor = 33554432
-long backcolor = 67108864
-string text = "input field visible"
-end type
-
-event clicked;rte_rtf.InputFieldsVisible = not rte_rtf.InputFieldsVisible
-rte_doc.InputFieldsVisible = not rte_doc.InputFieldsVisible
-end event
-
 type rte_rtf from richtextedit within w_convert
 integer x = 2775
 integer y = 104
 integer width = 2734
-integer height = 2516
+integer height = 2636
 integer taborder = 20
 integer textsize = -10
 integer weight = 400
