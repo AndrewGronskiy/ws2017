@@ -2,8 +2,6 @@
 forward
 global type w_convert from window
 end type
-type cb_rtf from commandbutton within w_convert
-end type
 type sle_rtf from singlelineedit within w_convert
 end type
 type st_2 from statictext within w_convert
@@ -36,7 +34,6 @@ boolean resizable = true
 long backcolor = 67108864
 string icon = "AppIcon!"
 boolean center = true
-cb_rtf cb_rtf
 sle_rtf sle_rtf
 st_2 st_2
 st_1 st_1
@@ -54,7 +51,6 @@ string is_docpath, is_docname[]
 end variables
 
 on w_convert.create
-this.cb_rtf=create cb_rtf
 this.sle_rtf=create sle_rtf
 this.st_2=create st_2
 this.st_1=create st_1
@@ -64,8 +60,7 @@ this.rte_doc=create rte_doc
 this.cbx_2=create cbx_2
 this.cbx_1=create cbx_1
 this.rte_rtf=create rte_rtf
-this.Control[]={this.cb_rtf,&
-this.sle_rtf,&
+this.Control[]={this.sle_rtf,&
 this.st_2,&
 this.st_1,&
 this.cb_doc,&
@@ -77,7 +72,6 @@ this.rte_rtf}
 end on
 
 on w_convert.destroy
-destroy(this.cb_rtf)
 destroy(this.sle_rtf)
 destroy(this.st_2)
 destroy(this.st_1)
@@ -89,26 +83,9 @@ destroy(this.cbx_1)
 destroy(this.rte_rtf)
 end on
 
-event open;//Проверка
-end event
-
-type cb_rtf from commandbutton within w_convert
-integer x = 5358
-integer width = 128
-integer height = 88
-integer taborder = 50
-integer textsize = -10
-integer weight = 400
-fontcharset fontcharset = russiancharset!
-fontpitch fontpitch = variable!
-fontfamily fontfamily = swiss!
-string facename = "Tahoma"
-string text = "..."
-end type
-
 type sle_rtf from singlelineedit within w_convert
-integer x = 2953
-integer width = 2386
+integer x = 3209
+integer width = 2286
 integer height = 84
 integer taborder = 40
 integer textsize = -10
@@ -123,7 +100,7 @@ end type
 type st_2 from statictext within w_convert
 integer x = 2779
 integer y = 16
-integer width = 169
+integer width = 416
 integer height = 64
 integer textsize = -10
 integer weight = 400
@@ -133,7 +110,7 @@ fontfamily fontfamily = swiss!
 string facename = "Tahoma"
 long textcolor = 33554432
 long backcolor = 67108864
-string text = "RTF"
+string text = "Converted RTF"
 boolean focusrectangle = false
 end type
 
@@ -155,8 +132,8 @@ boolean focusrectangle = false
 end type
 
 type cb_doc from commandbutton within w_convert
-integer x = 2592
-integer width = 128
+integer x = 2491
+integer width = 247
 integer height = 88
 integer taborder = 20
 integer textsize = -10
@@ -165,7 +142,7 @@ fontcharset fontcharset = russiancharset!
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
 string facename = "Tahoma"
-string text = "..."
+string text = "File"
 end type
 
 event clicked;int li_rtn
@@ -185,7 +162,7 @@ end event
 
 type sle_doc from singlelineedit within w_convert
 integer x = 187
-integer width = 2386
+integer width = 2290
 integer height = 84
 integer taborder = 10
 integer textsize = -10
